@@ -6,8 +6,8 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: Self agent test
+
 
 steps:
 - script: echo Hello, world!
