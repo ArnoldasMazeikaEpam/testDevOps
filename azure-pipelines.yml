@@ -20,8 +20,10 @@ steps:
       
       dt=$(date)
       echo $dt
-      echo $dt >> pipedate
-       cat pipedate
+      echo $dt >> pipedateForFirst
+      echo $dt >> pipedateForSecound
+      cat pipedateForFirst
+      cat pipedateForSecound
       
       echo Hello world
 - task: CmdLine@2
