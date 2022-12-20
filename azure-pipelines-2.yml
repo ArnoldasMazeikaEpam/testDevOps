@@ -14,7 +14,10 @@ resources:
     trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
 
 
-pool: Self agent test
+pool: 
+  name: Self agent test
+  demands:
+    - agent -equals 2
 
 steps:
 - script: echo Hello, world!
