@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -12,7 +13,22 @@ pool: Self agent test
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      dt=$(date)
+      echo $dt
+      echo $dt >> pipedate
+       cat pipedate
+      
+      echo Hello world
+- task: CmdLine@2
+  inputs:
+    script: |
+      mkdir artifa
+      mv pipedate artifa
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
