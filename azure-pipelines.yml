@@ -25,7 +25,7 @@ steps:
       cat pipedateForFirst
       cat pipedateForSecound
       
-      echo Hello world
+      echo Hello world2
 - task: CmdLine@2
   inputs:
     script: |
