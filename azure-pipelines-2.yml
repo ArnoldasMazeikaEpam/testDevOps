@@ -16,8 +16,8 @@ resources:
 
 pool: 
   name: Self agent test
-  demands:
-    - agent -equals 2
+  # demands:
+  #   - agent -equals 2
 
 steps:
 - script: echo Hello, world!
