@@ -45,5 +45,6 @@ steps:
     script: |
       echo Write your commands here
       ls -la $(System.ArtifactsDirectory)/dateFromBuild
-      cd $(System.ArtifactsDirectory)/dateFromBuild
+      tar -xvf $(System.ArtifactsDirectory)/dateFromBuild/dateFromBuild.tar 
       pwd
+      ls -la
