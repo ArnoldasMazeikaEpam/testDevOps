@@ -56,7 +56,7 @@ steps:
     script: |
       echo Write your commands here
       mkdir art
-      echo Pipeline 1 >> artifa/pipedateForFirst     
+      echo Pipeline-1, buildnumber $(Build.BuildNumber) >> artifa/pipedateForFirst     
       mv artifa/pipedateForFirst art
  
 

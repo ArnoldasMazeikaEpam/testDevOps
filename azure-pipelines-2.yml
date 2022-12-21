@@ -55,7 +55,7 @@ steps:
     script: |
       echo Write your commands here
       mkdir art
-      echo Pipeline 2 >> artifa/pipedateForSecound
+      echo Pipeline-2, buildnumber $(Build.BuildNumber)	>> artifa/pipedateForSecound
       mv artifa/pipedateForSecound art
 
 - task: CopyFiles@2
