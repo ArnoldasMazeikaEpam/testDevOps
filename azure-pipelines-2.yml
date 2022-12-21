@@ -53,11 +53,13 @@ steps:
   inputs:
     script: |
       echo Write your commands here
+      mkdir art
       echo Pipeline 2 >> artifa/pipedateForSecound
+      mv artifa/pipedateForSecound art
 
 - task: CopyFiles@2
   inputs:
-    contents: 'artifa/pipedateForSecound'
+    contents: 'art/**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
