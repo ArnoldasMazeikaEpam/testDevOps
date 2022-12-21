@@ -80,4 +80,4 @@ steps:
     vstsFeed: '253737b6-70b9-419e-9e58-61db393e8ed9'
     vstsFeedPackage: 'artifactParallelFirst'
     vstsPackageVersion: '1.1'
-    verbosity: 'Trace''   
+    verbosity: 'Trace'
