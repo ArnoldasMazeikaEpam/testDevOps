@@ -46,6 +46,7 @@ steps:
       echo Write your commands here
       ls -la $(System.ArtifactsDirectory)/dateFromBuild
       tar -xvf $(System.ArtifactsDirectory)/dateFromBuild/dateFromBuild.tar 
+      rm -rf $(System.ArtifactsDirectory)/dateFromBuild
       pwd
       ls -la
 
