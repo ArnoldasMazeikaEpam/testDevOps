@@ -72,21 +72,13 @@ steps:
     publishLocation: 'Container'
     StoreAsTar: true
 
-- task: UniversalPackages@0
-  inputs:
-    command: 'download'
-    downloadDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUse: 'internal'
-    vstsFeed: '253737b6-70b9-419e-9e58-61db393e8ed9'
-    vstsFeedPackage: 'artifactParallelFirst'
-    vstsPackageVersion: '1.1'
-    verbosity: 'Trace'
+
 - task: UniversalPackages@0
   inputs:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
     feedsToUsePublish: 'internal'
-    vstsFeedPublish: '253737b6-70b9-419e-9e58-61db393e8ed9'
+    vstsFeedPublish: 'e43bfa47-9507-4275-8d37-97891357f4b5/6cfbd1df-3567-48af-ad14-af16a214ac73'
     vstsFeedPackagePublish: 'TextArchive2'
     versionOption: 'patch'
     verbosity: 'Trace'
