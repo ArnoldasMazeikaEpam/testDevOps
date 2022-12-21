@@ -78,7 +78,7 @@ steps:
     command: 'publish'
     publishDirectory: '$(Build.ArtifactStagingDirectory)'
     feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'e43bfa47-9507-4275-8d37-97891357f4b5/6cfbd1df-3567-48af-ad14-af16a214ac73'
+    vstsFeedPublish: 'b4abcb2c-7468-43aa-aa36-fdc13ec05114'
     vstsFeedPackagePublish: 'TextArchive2'
     versionOption: 'patch'
     verbosity: 'Trace'
