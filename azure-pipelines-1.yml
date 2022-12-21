@@ -48,3 +48,21 @@ steps:
       tar -xvf $(System.ArtifactsDirectory)/dateFromBuild/dateFromBuild.tar 
       pwd
       ls -la
+
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      echo Pipeline 1 >> artifa/pipedateForFirst      
+
+- task: CopyFiles@2
+  inputs:
+    contents: 'artifa/pipedateForFirst'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dateFromPar1'
+    publishLocation: 'Container'
+    StoreAsTar: true
