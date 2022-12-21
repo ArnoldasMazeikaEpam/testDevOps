@@ -23,7 +23,27 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'specific'
+    project: 'e43bfa47-9507-4275-8d37-97891357f4b5'
+    pipeline: '1'
+    specificBuildWithTriggering: true
+    buildVersionToDownload: 'latest'
+    downloadType: 'single'
+    artifactName: 'dateFromBuild'
+    downloadPath: '$(System.ArtifactsDirectory)'
+    cleanDestinationFolder: true
+    
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      ls -la $System.ArtifactsDirectory
+      cd $System.ArtifactsDirectory
+      pwd
