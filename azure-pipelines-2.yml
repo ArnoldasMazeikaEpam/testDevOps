@@ -69,3 +69,13 @@ steps:
     ArtifactName: 'dateFromPar2'
     publishLocation: 'Container'
     StoreAsTar: true
+
+- task: UniversalPackages@0
+  inputs:
+    command: 'download'
+    downloadDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUse: 'internal'
+    vstsFeed: '253737b6-70b9-419e-9e58-61db393e8ed9'
+    vstsFeedPackage: 'artifactParallelSecound'
+    vstsPackageVersion: '1.1'
+    verbosity: 'Trace''    
