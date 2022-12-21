@@ -81,3 +81,12 @@ steps:
     vstsFeedPackage: 'artifactParallelFirst'
     vstsPackageVersion: '1.1'
     verbosity: 'Trace'
+- task: UniversalPackages@0
+  inputs:
+    command: 'publish'
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    feedsToUsePublish: 'internal'
+    vstsFeedPublish: '253737b6-70b9-419e-9e58-61db393e8ed9'
+    vstsFeedPackagePublish: 'TextArchive2'
+    versionOption: 'patch'
+    verbosity: 'Trace'
